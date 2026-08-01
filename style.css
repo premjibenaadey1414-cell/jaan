@@ -1,0 +1,252 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Poppins",sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* Progress Bar */
+
+.progress{
+    position:fixed;
+    top:0;
+    left:0;
+    width:0%;
+    height:4px;
+    background:#ff4d6d;
+    z-index:9999;
+}
+
+/* Navbar */
+
+nav{
+    position:fixed;
+    width:100%;
+    padding:20px 8%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#fff;
+}
+
+/* Hero */
+
+.hero{
+    width:100%;
+    height:100vh;
+    background:url("hero.jpg") center/cover no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.45);
+}
+
+.content{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    padding:20px;
+}
+
+.content h4{
+    font-size:20px;
+    letter-spacing:4px;
+    color:#ddd;
+}
+
+.content h1{
+    font-size:70px;
+    margin:20px 0;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.8;
+}
+
+/* Button */
+
+.btn{
+    display:inline-block;
+    margin-top:35px;
+    padding:15px 40px;
+    border:2px solid white;
+    color:white;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.4s;
+}
+
+.btn:hover{
+    background:white;
+    color:black;
+}
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    width:100%;
+    text-align:center;
+    animation:float 2s infinite;
+}
+
+@keyframes float{
+    50%{
+        transform:translateY(10px);
+    }
+}
+
+/* Story Sections */
+
+.chapter{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding:100px 8%;
+}
+
+.reverse{
+    flex-direction:row-reverse;
+}
+
+.image img{
+    width:420px;
+    border-radius:20px;
+    transition:.5s;
+    box-shadow:0 10px 40px rgba(255,255,255,.15);
+}
+
+.image img:hover{
+    transform:scale(1.05);
+}
+
+.text{
+    max-width:500px;
+}
+
+.text h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.text p{
+    font-size:20px;
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* Ending */
+
+.ending{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#050505;
+    position:relative;
+}
+
+.ending-content{
+    z-index:2;
+}
+
+.ending h2{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.ending p{
+    font-size:22px;
+    line-height:2;
+}
+
+/* Glow */
+
+.glow{
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#ff4d6d;
+    border-radius:50%;
+    filter:blur(150px);
+    opacity:.25;
+}
+
+/* Stars */
+
+.stars{
+    position:absolute;
+    inset:0;
+    background-image:radial-gradient(white 1px,transparent 1px);
+    background-size:40px 40px;
+    opacity:.25;
+}
+
+/* Cursor */
+
+.cursor{
+    position:fixed;
+    width:18px;
+    height:18px;
+    background:white;
+    border-radius:50%;
+    transform:translate(-50%,-50%);
+    pointer-events:none;
+    mix-blend-mode:difference;
+    z-index:99999;
+}
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:50px;
+}
+
+.chapter,
+.reverse{
+    flex-direction:column;
+    text-align:center;
+}
+
+.image img{
+    width:100%;
+}
+
+.text h2{
+    font-size:36px;
+}
+
+.text p{
+    font-size:18px;
+}
+
+}
